@@ -1,11 +1,10 @@
-<?php 
+<?php
+include( '/include/include_php.php');
+/*include( '/include/db_connect.php');
 
-function output($data)
-{
-	echo '<!-'.$data.'-->';
-}
-//lalla
-include( '/include/db_connect.php');
+session_start();
+unset( $_SESSION['auth'] );*/
+
 $sorting = $_GET['sort'];
 switch ( $sorting ) 
 {

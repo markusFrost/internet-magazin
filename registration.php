@@ -1,7 +1,10 @@
-<?php 
-
-include( '/include/db_connect.php' );
+<?php
+include( '/include/include_php.php');
+/*include( '/include/db_connect.php' );
 include( '/functions/functions.php' );
+
+session_start();
+unset( $_SESSION['auth'] );*/
 
 
  ?>

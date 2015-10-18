@@ -20,10 +20,24 @@
 		</ul>
 
 		<!-- Вход и регистрация -->
-		<p id="reg-auth-title" align="right">
-			<a class="top-auth btn-grad">Вход</a>
-			<a href="registration.php">Регистрация</a>
-		</p>
+
+		<?php
+		if ( $_SESSION['auth'] == 'yes_auth' )
+		{
+			echo '<p id="auth-user-info" align="right"><img src="/images/user.png" alt="">Здравствуйте, '.$_SESSION['auth_name'].'! </p>';
+		}
+		else
+		{
+			echo '<p id="reg-auth-title" align="right"> <a class="top-auth btn-grad">Вход</a> <a href="registration.php">Регистрация</a> </p>';
+		}
+		?>
+
+
+
+<!--		<p id="reg-auth-title" align="right">-->
+<!--			<a class="top-auth btn-grad">Вход</a>-->
+<!--			<a href="registration.php">Регистрация</a>-->
+<!--		</p>-->
 
 		<div id="block-top-auth">
 			<div class="corner"></div>
