@@ -21,7 +21,7 @@
 
 		<!-- Вход и регистрация -->
 		<p id="reg-auth-title" align="right">
-			<a class="top-auth btn-grad" href="">Вход</a>
+			<a class="top-auth btn-grad">Вход</a>
 			<a href="registration.php">Регистрация</a>
 		</p>
 
@@ -32,7 +32,7 @@
 					<h3>Вход</h3>
 					<p id="message-auth">Неверный логин или пароль</p>
 					<li><center><input type="text" id="auth_login" placeholder="Логи или E-mail"></center>	</li>
-					<li><center><input type="text" id="auth_pass" placeholder="Пароль"><span class="pass-show" id="button-pass-show-hide"></span></center> </li>
+					<li><center><input type="password" id="auth_pass" placeholder="Пароль"><span class="pass-show" id="button-pass-show-hide"></span></center> </li>
 				</ul>
 				<ul id="list-auth">
 					<li><input type="checkbox" name="rememberme" id="rememberme"/><label for="rememberme">Запомнить меня</label></li>

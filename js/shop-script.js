@@ -50,7 +50,7 @@ if ( $.cookie( 'select_style' ) == 'grid' )
 
 	$("#block-category > ul > li > a").click( function()
 	{
-		if ( $(this).attr( 'class' ) != 'active' )// ĞµÑĞ»Ğ¸ ÑĞ²Ñ‘Ñ€Ğ½ÑƒÑ‚Ğ°
+		if ( $(this).attr( 'class' ) != 'active' )// åñëè ñâ¸ğíóòà
 		{
 			$("#block-category > ul > li > ul").slideUp( 400 );
 			$( this ).next().slideToggle( 400 );
@@ -95,5 +95,54 @@ if ( $.cookie( 'select_style' ) == 'grid' )
 		{
 			$( '#block-captcha>img' ).attr( "src" , "/reg/reg_captcha.php?r=" + Math.random() );
 		});
+
+	$(".top-auth").toggle(
+		function()
+		{
+			$(".top-auth").attr( "id" , "active-button" );
+			$("#block-top-auth").fadeIn( 200 );
+		},
+		function()
+		{
+			$(".top-auth").attr( "id" , "" );
+			$("#block-top-auth").fadeOut( 200 );
+		}
+	);
+
+	$("#button-pass-show-hide").click(function()
+	{
+		var statuspass = $("#button-pass-show-hide").attr("class");
+
+		if ( statuspass == "pass-show" )
+		{
+			$( "#button-pass-show-hide").attr( "class", "pass-hide" );
+
+			var $input = $("#auth_pass");
+			var change = "text";
+			var rep = $("<input placeholder='Ïàğîëü' type='" + change + "' />" )
+				.attr( "id",$input.attr("id" ))
+				.attr( "name",$input.attr("name") )
+				.attr( "class",$input.attr("class") )
+				.val( $input.val() )
+				.insertBefore( $input );
+			$input.remove();
+			$input = rep;
+		}
+		else
+		{
+			$( "#button-pass-show-hide").attr( "class", "pass-show" );
+
+			var $input = $("#auth_pass");
+			var change = "password";
+			var rep = $("<input placeholder='Ïàğîëü' type='" + change + "' />" )
+				.attr( "id",$input.attr("id" ))
+				.attr( "name",$input.attr("name") )
+				.attr( "class",$input.attr("class") )
+				.val( $input.val() )
+				.insertBefore( $input );
+			$input.remove();
+			$input = rep;
+		}
+	});
 
 });

@@ -77,6 +77,11 @@ strong
 	float: right;
 }
 
+#reg-auth-title > a#active-button
+{
+	background: url( /images/auth-butt-bg-click.png );
+}
+
 #reg-auth-title a.top-auth
 {
 	font: bold 13px sans-serif; 
@@ -90,6 +95,7 @@ strong
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	color: black;
+	cursor: pointer;
 	
 }
 
