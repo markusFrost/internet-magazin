@@ -4,7 +4,7 @@ function output($data)
 {
 	echo '<!-'.$data.'-->';
 }
-
+//lalla
 include( '/include/db_connect.php');
 $sorting = $_GET['sort'];
 switch ( $sorting ) 
