@@ -25,6 +25,25 @@
 			<a href="registration.php">Регистрация</a>
 		</p>
 
+		<div id="block-top-auth">
+			<div class="corner"></div>
+			<form method="post" action="">
+				<ul id="input-email-pass">
+					<h3>Вход</h3>
+					<p id="message-auth">Неверный логин или пароль</p>
+					<li><center><input type="text" id="auth_login" placeholder="Логи или E-mail"></center>	</li>
+					<li><center><input type="text" id="auth_pass" placeholder="Пароль"><span class="pass-show" id="button-pass-show-hide"></span></center> </li>
+				</ul>
+				<ul id="list-auth">
+					<li><input type="checkbox" name="rememberme" id="rememberme"/><label for="rememberme">Запомнить меня</label></li>
+					<li><a href="#" id="remindpass">Забыли пароль?</a></li>
+				</ul>
+				<p align="right" id="button-auth"><a>Вход</a></p>
+				<p class="auth-loading" align="right"><img src="/images/loading.gif" alt=""></p>
+			</form>
+		</div>
+
+
 	</div>
 	<!-- Линия -->
 	<hr>
