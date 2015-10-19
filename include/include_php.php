@@ -7,8 +7,8 @@ session_start();
 include( '/include/auth_cook.php' );
 
 
- unset( $_SESSION['auth'] );
-setcookie( "rememberme", '', 0, '/' );
+ /*unset( $_SESSION['auth'] );
+setcookie( "rememberme", '', 0, '/' );*/
 
 
 ?>

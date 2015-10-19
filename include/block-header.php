@@ -72,6 +72,18 @@
 	</div>
 	<!-- Линия -->
 	<hr>
+
+
+	<div id="block-user">
+		<div class="corner2"></div>
+		<ul>
+			<li><img src="/images/user_info.png" alt=""><a href="../profile.php">Профиль</a></li>
+			<li><img src="/images/logout.png" alt=""><a id="logout">Выход</a></li>
+		</ul>
+
+	</div>
+
+
 	<!-- Логотип -->
 	<img id="img-logo" src="/images/logo.png" alt="">
 

@@ -275,4 +275,33 @@ if ( $.cookie( 'select_style' ) == 'grid' )
 		}
 	});
 
+	$('#auth-user-info').toggle(
+		function()
+		{
+			$("#block-user").fadeIn( 100 );
+		},
+		function()
+		{
+			$("#block-user").fadeOut( 100 );
+		}
+	);
+
+	$("#logout").click( function()
+	{
+		$.ajax(
+			{
+				type : "POST",
+				url : "/include/logout.php",
+				dataType : "html",
+				cashe : false,
+				success : function( data )
+				{
+					if ( data == 'logout' )
+					{
+						location.reload();
+					}
+				}
+			});
+	});
+
 });
