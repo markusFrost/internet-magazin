@@ -82,7 +82,22 @@ if ( $_SESSION["auth"] == 'yes_auth' )
             $dataquery = $newpassquery."surname='".$_POST["info_surname"]."',name='".$_POST["info_name"]
                 ."',patronymic='".$_POST["info_patronymic"]."',email='".$_POST["info_email"]."',phone='"
                 .$_POST["info_phone"]."',address='".$_POST["info_address"]."'";
-            // $update = mysql_query("UPDATE reg_user SET $dataquery WHERE login = '{$_SESSION['auth_login']}'",$link);
+
+            $query = "update reg_user set $dataquery WHERE login = '{$_SESSION['auth_login']}'";
+            $update = mysql_query( $query, $link );
+
+            if ( $newpass )
+            {
+                $_SESSION['auth_pass'] = $newpass;
+            }
+
+            $_SESSION["auth_surname"] = $_POST["info_surname"];
+            $_SESSION["auth_name"] = $_POST["info_name"];
+            $_SESSION["auth_patronymic"] = $_POST["info_patronymic"];
+            $_SESSION["auth_address"] = $_POST["info_address"];
+            $_SESSION["auth_phone"] = $_POST["info_phone"];
+            $_SESSION["auth_email"] = $_POST["info_email"];
+
         }
     }
 
@@ -121,6 +136,15 @@ if ( $_SESSION["auth"] == 'yes_auth' )
         <div id="block-content">
             <h3 class="title-h3">Изменение профиля</h3>
 
+            <?php
+
+                if ( $_SESSION['msg'] )
+                {
+                    echo $_SESSION['msg'];
+                    unset ( $_SESSION['msg'] ); // не добавлять старые ошибки в новую сессию
+                }
+            ?>
+
             <form method="post">
                 <ul id="info-profile">
                     <li>
@@ -138,37 +162,37 @@ if ( $_SESSION["auth"] == 'yes_auth' )
                     <li>
                         <label for="info_surname">Фамилия</label>
                         <span class="star">*</span>
-                        <input type="text" name="info_surname" id="info_surname"/>
+                        <input type="text" name="info_surname" id="info_surname" value="<?php echo  $_SESSION["auth_surname"]; ?>"/>
                     </li>
                     <!--  -->
                     <li>
                         <label for="info_name">Имя</label>
                         <span class="star">*</span>
-                        <input type="text" name="info_name" id="info_name"/>
+                        <input type="text" name="info_name" id="info_name" value="<?php echo  $_SESSION["auth_name"]; ?>"/>
                     </li>
                     <!--  -->
                     <li>
                         <label for="info_patronymic">Отчество</label>
                         <span class="star">*</span>
-                        <input type="text" name="info_patronymic" id="info_patronymic"/>
+                        <input type="text" name="info_patronymic" value="<?php echo  $_SESSION["auth_patronymic"]; ?>" id="info_patronymic"/>
                     </li>
                     <!--  -->
                     <li>
                         <label for="info_email">E-mail</label>
                         <span class="star">*</span>
-                        <input type="text" name="info_email" id="info_email"/>
+                        <input type="text" name="info_email" id="info_email" value="<?php echo  $_SESSION["auth_email"]; ?>"/>
                     </li>
                     <!--  -->
                     <li>
                         <label for="info_phone">Телефон</label>
                         <span class="star">*</span>
-                        <input type="text" name="info_phone" id="info_phone"/>
+                        <input type="text" name="info_phone" value="<?php echo  $_SESSION["auth_phone"]; ?>" id="info_phone"/>
                     </li>
                     <!--  -->
                     <li>
                         <label for="info_address">Адрес доставки</label>
                         <span class="star">*</span>
-                        <textarea name="info_address"></textarea>
+                        <textarea  name="info_address"><?php echo  $_SESSION["auth_address"]; ?></textarea>
                     </li>
                     <!--  -->
                 </ul>
