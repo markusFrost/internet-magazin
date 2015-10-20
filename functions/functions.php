@@ -91,4 +91,6 @@ function displaySortPanel( $sort_name, $cat_link, $type )
 
 
 
+
+
  ?>

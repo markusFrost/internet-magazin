@@ -123,7 +123,7 @@
 
 <p align="right" id="block-basket">
 <img src="/images/cart-icon.png" alt="">
-<a href="">Корзина пуста</a>
+<a href="cart.php?action=oneclick">Корзина пуста</a>
 </p>
 
 <div id="nav-line"></div>
