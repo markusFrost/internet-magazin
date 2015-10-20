@@ -4,7 +4,7 @@
     $id = clear_string( $_GET["id"] );
     $action = clear_string( $_GET["action"] );
 
-    switch ( $action )
+    switch ( $action ) // выбираем что нужно сделать
     {
         case "clear":
         {
