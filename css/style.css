@@ -169,6 +169,8 @@ hr
 	height: auto;
 	margin-left: 700px;
 	margin-top: 23px;
+	z-index: 999;
+	position: absolute;
 }
 #block-search input#input-search
 {
@@ -1482,6 +1484,37 @@ h3
 	padding-top: 10px;
 	padding-bottom: 10px;
 	padding-left: 10px;
+}
+
+p#search-fail
+{
+	margin-top: 10px;
+	font: 18px sans-serif;
+}
+
+#result-search
+{
+	display: none;
+	border-left: 1px solid #E1E1E2;
+	border-right: 1px solid #E1E1E2;
+	border-bottom: 1px solid #E1E1E2;
+	width: 275px;
+	height: auto;
+	background-color: white;
+}
+
+#result-search a
+{
+	font: 14px sans-serif;
+	text-decoration: none;
+	padding: 5px;
+	display: block;
+	color: black;
+}
+
+#result-search a:hover
+{
+	background-color: #F1F2F2;
 }
 
 

@@ -18,6 +18,7 @@ $type = clear_string( $_GET['type'] );
 	<script type="text/javascript" src="/js/jcarousellite_1.0.1.js"></script>
 	<script type="text/javascript" src="/js/shop-script.js"></script>
 	<script type="text/javascript" src="/js/jquery.cookie.min.js"></script>
+	<script type="text/javascript" src="/js/TextChange.js"></script>
 		<script type="text/javascript" src="/trackbar/jquery.trackbar.js"></script>
 	<link rel="stylesheet" type="text/css" href="trackbar/trackbar.css">
 	<link rel="stylesheet" type="text/css" href="css/reset.css">

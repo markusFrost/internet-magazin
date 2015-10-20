@@ -17,6 +17,7 @@ unset( $_SESSION['auth'] );*/
 	<script type="text/javascript" src="/js/shop-script.js"></script>
 	<script type="text/javascript" src="/js/jquery.cookie.min.js"></script>
 	<script type="text/javascript" src="/trackbar/jquery.trackbar.js"></script>
+	<script type="text/javascript" src="/js/TextChange.js"></script>
 	<script type="text/javascript" src="/js/jquery.form.js"></script>
 	<script type="text/javascript" src="/js/jquery.validate.js"></script>
 	<link rel="stylesheet" type="text/css" href="trackbar/trackbar.css">
